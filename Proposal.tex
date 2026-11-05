@@ -1,0 +1,230 @@
+%% This is file `elsarticle-template-1-num.tex',
+%%
+%% Copyright 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%%
+%% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
+%% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
+%%
+
+\documentclass[a4 paper, 12pt]{elsarticle}
+\usepackage[right=0.8in,bottom=0.8in,left=0.8in,top=0.8in]{geometry} 
+\usepackage{fancyhdr}
+
+\usepackage[T1]{fontenc}
+
+
+\renewcommand{\theaffn}{\fnsymbol{affn}}
+\makeatletter
+\long\def\@@address[#1]#2{\g@addto@macro\elsaddress{%
+    \def\baselinestretch{1}%
+     \refstepcounter{affn}
+     \xdef\@currentlabel{\theaffn}
+     \elsLabel{#1}%
+    \textsuperscript{\theaffn}#2\par}}
+\def\ps@pprintTitle{%
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \def\@oddfoot{\reset@font\hfil\thepage\hfil}
+  \let\@evenfoot\@oddfoot
+}
+\makeatother
+
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% The graphicx package provides the includegraphics command.
+\usepackage{graphicx}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+\usepackage{enumitem}
+
+\usepackage[font = small]{caption}
+\usepackage{endnotes}
+\usepackage{colortbl}
+\usepackage[bottom]{footmisc}
+\usepackage{color, soul}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{natbib}
+\biboptions{round, authoryear}
+\usepackage{wrapfig}
+%\setcitestyle{round, comma}
+\usepackage{hhline}
+\usepackage[capposition = top]{floatrow}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+
+%\let\footnote=\endnote
+
+
+
+\usetikzlibrary{arrows,shapes, positioning, calc}
+\tikzset{
+    between/.style args={#1 and #2}{
+         at = ($(#1)!0.5!(#2)$)
+    }
+}
+
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+
+\renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
+
+
+
+
+\usepackage [autostyle, english = american]{csquotes}
+%\MakeOuterQuote{"}
+
+\usetikzlibrary{arrows,shapes, positioning, calc, fit}
+\tikzset{
+    between/.style args={#1 and #2}{
+         at = ($(#1)!0.5!(#2)$)
+    }
+}
+
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=magenta,
+    filecolor=magenta,      
+    urlcolor=red,
+}
+
+
+\begin{document}
+
+
+\begin{center} \large Final Project Proposal: Zainab Adib, Emili Robles, Salma Emjaheed, Boxiong Wang \end{center}
+\vspace{2mm}
+
+\section*{Datasets we're interested in using}
+
+\textit{Describe the datasets you want to use for the final project, providing brief descriptions of each}
+
+\text The dataset, Survey on Academic Self-Efficacy, Academic Stress, Critical Thinking, Performance Expectations, and Students’ AI Dependency, is obtained from Mendeley Data, a research data repository. It is a survey on Academic Self-Efficacy, Academic Stress, Critical Thinking, Performance Expectations, and Students’ AI Dependency. The dataset was contributed by Quynh Pham Viet, Duy Nguyen, Xiem Nguyen, and Dat Ngoc Nguyen.
+The participants in the survey are students. There are 1581 observations and 29 variables. Each row represents a survey participant, and each column is a question in the survey. The data were updated in June 2026. The survey was conducted on university students in Vietnam
+
+Another dataset is the Career Anxiety in the Age of Artificial Intelligence: Survey Data of University Students in Bangladesh. It examines higher education students in Bangladesh and their career anxiety in today’s job market. It was contributed by Shahrin Islam, Bibhas Roy Chowdhury Piyas, Fatama Jannat Tisha, Humaun Kabir Nayem, Sadia Rahman, Bijoy Roy Chowdhury Preenon, and Shazzad Hossen. It has 3157 observations and 13 variables. It was last updated in March 2026. 
+
+
+
+
+\section*{Questions we want to explore}
+
+\textit{Describe some questions you want to explore using the data - note these questions don't need to be causal and can be descriptive}
+
+\begin{itemize}
+    \item How is the use of AI affecting students' confidence in their abilities and skills? 
+    \item How helpful is the use of AI in students' learning process?
+    \item How different is the use of AI across different fields of study.
+    \item How does the use of AI daily affect critical thinking skills? 
+    \item Is there a correlation between frequency use of different AI tools and students’ critical thinking?
+    \item Is there a correlation between the frequency of AI use and students’ anxiety of the future? 
+    \item Are there any differences and similarities between students across countries by gender?
+    \item Is AI dependency difference in higher education in Vietnam and Bangladesh? 
+    \item Are students who use more AI more frequently have more anxiety about the future job market?
+
+\end{itemize}
+
+\section*{Techniques from the class we will use}
+\textit{For instance, data wrangling to clean the data; merging different datasets; data visualization; feel free to list future topics we will cover}
+
+\text We will use data wrangling techniques to clean and prepare the survey data on AI usage in academics and career anxiety by identifying missing values and duplicate observations, checking variable types, and recoding categorical variables to our own understanding. Inspecting missing values should be a priority, that way we can identify which respondents skipped questions and check if they are completely blank. Currently in the AI usage in academics survey data, we have gender, year, major, type of school, and time in school as numerically coded. Additionally, we will focus on replacing numeric demographic codes with more meaningful labels. The actual survey questions are also coded, for example, we have “Are you worried about not being able to use AI tools for your academic tasks?” coded as “AID1”, reshaping these into codes we all understand as a group will be helpful.
+
+We can also look into merging both datasets on AI usage in Vietnam and career anxiety due to AI in Bangladesh to test our research questions and do a comparison with people’s experiences in AI usage. Additionally, we will use data visualization for both datasets, with the use of NumPy and pandas to create visualizations to help us explore potential relationships between some of our questions listed above on the frequency of AI use and students’ anxiety of the future.
+
+
+\section*{Any questions for the Professor/TA?}
+
+\begin{itemize}
+\item Do you have any suggestions on how we can merge two similar data tables with different standards, and on how to decide which index to use after merging when the indices are similar but not identical?
+\item Do you have any suggestions on the format for renaming the coded issues, or are there any recognized standards for making such changes?
+\item What do you recommend as the best approach if a key variable has missing data? Also, is there a threshold for the percentage of missing data at which point we should consider the dataset unusable for our analysis? 
+\end{itemize}
+
+
+
+\end{document}
+
+
+
+%%
+%% End of file `elsarticle-template-1-num.tex'.
